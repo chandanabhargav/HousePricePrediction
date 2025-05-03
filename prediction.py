@@ -17,7 +17,7 @@ app = Flask(__name__)
 @app.route('/predict')
 def visualize_and_predict():
     # Load the dataset
-    df = pd.read_csv('https://raw.githubusercontent.com/ageron/handson-ml2/master/datasets/housing/housing.csv', nrows=1000)
+    df = pd.read_csv('https://raw.githubusercontent.com/ageron/handson-ml2/master/datasets/housing/housing.csv')
 
     # Fill missing values
     df['total_bedrooms'].fillna(df['total_bedrooms'].median(), inplace=True)
